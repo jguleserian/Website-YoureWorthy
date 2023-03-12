@@ -1,0 +1,33 @@
+/* ------GLOBAL STYLES------ */
+
+
+/* ----RESET & VARIABLES----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+:root {
+    /* colors */
+    --gold: #e9b620;
+    --royal-blue: #2A3C98;
+    --secondary-blue: #1774BB --black: #231F20;
+    /* typography */
+    font-family: 'Baskervville', serif, basic-sans, sans-serif;
+    font-size: 62.5%;
+    --header: basic-sans;
+    --body-text: 'Baskervville';
+}
+
+body {
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after,
+*:hover,
+*:focus,
+*:active {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
