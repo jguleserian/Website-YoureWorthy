@@ -3,16 +3,16 @@
 
 /* ----RESET & VARIABLES----- */
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Golos+Text:wght@400;600&display=swap');
 :root {
     /* colors */
     --gold: #e9b620;
-    --royal-blue: #2A3C98;
+    --royal-blue: #1C3564;
     --secondary-blue: #1774BB --black: #231F20;
     /* typography */
-    font-family: 'Baskervville', serif, basic-sans, sans-serif;
+    font-family: 'Baskervville', serif, 'Golos Text', sans-serif;
     font-size: 62.5%;
-    --header: basic-sans;
+    --header: 'Golos Text';
     --body-text: 'Baskervville';
 }
 

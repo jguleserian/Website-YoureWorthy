@@ -8,8 +8,8 @@
 
 #nav-links {
     display: flex;
-    justify-content: space-around;
-    font-family: var(--body-text);
+    justify-content: flex-end;
+    font-family: var(--header);
     min-width: 50vw;
 }
 
