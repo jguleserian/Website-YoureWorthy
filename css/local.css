@@ -18,12 +18,10 @@
     min-width: 50vw;
 }
 
-.link {
-    padding: 0 1rem;
-}
-
-li.link,
-a.link {
+.link,
+.link:link,
+.link:visited {
+    padding: 0 3rem;
     list-style-type: none;
     text-decoration-line: none;
     text-transform: uppercase;
@@ -31,7 +29,36 @@ a.link {
     color: white;
 }
 
-button.contact {
+.link:active {
+    color: var(--gold);
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration-line: none;
+    font-family: var(--header);
+    color: white;
+    background-color: var(--gold);
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    padding: 1.25rem 2.25rem;
+    border-radius: 50px;
+    transition: all .2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    transform: translateY(2px);
+}
+
+btn-contact {
     display: inline-block;
     background-color: var(--gold);
     color: white;
@@ -80,19 +107,6 @@ button.contact {
     list-style-type: none;
 }
 
-a.book {
-    padding: 1.25rem 1.5rem 1.25rem 1.5rem;
-    border-radius: 2.5rem;
-    font-family: 'Golos Text';
-    font-size: 2.5vh;
-    text-decoration-line: none;
-    color: white;
-    text-transform: uppercase;
-    background-color: var(--gold);
-    text-shadow: 1px 1px 1px black;
-    box-shadow: 1px 1px 1px black;
-}
-
 .circle {
     position: absolute;
     height: 33vh;
@@ -124,25 +138,21 @@ a.book {
         left: 0;
         top: 0;
     }
-
     25% {
         left: 200px;
         top: 200px;
         opacity: 65%;
     }
-
     50% {
         left: 100px;
         top: 400px;
         opacity: 80%;
     }
-
     75% {
         left: 400px;
         top: 250px;
         opacity: 60%;
     }
-
     100% {
         left: 0;
         top: 0;
@@ -155,22 +165,18 @@ a.book {
         right: 0;
         bottom: 0;
     }
-
     25% {
         right: 200px;
         bottom: 200px;
     }
-
     50% {
         right: 100px;
         bottom: 400px;
     }
-
     75% {
         right: 400px;
         bottom: 250px;
     }
-
     100% {
         right: 0;
         bottom: 0;
