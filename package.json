@@ -1,0 +1,22 @@
+{
+    "name": "youre-worthy",
+    "version": "1.0.0",
+    "description": "You're Worthy site for Jamelle Payne",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+jguleserian/Website-YoureWorthy.git"
+    },
+    "author": "Jeff Guleserian",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jguleserian/Website-YoureWorthy/issues"
+    },
+    "homepage": "https://github.com/jguleserian/Website-YoureWorthy#readme",
+    "dependencies": {
+        "sass": "^1.62.1"
+    }
+}
