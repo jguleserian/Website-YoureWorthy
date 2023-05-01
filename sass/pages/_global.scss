@@ -4,43 +4,30 @@
 /* ----RESET & VARIABLES----- */
 
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Golos+Text:wght@400;600&display=swap');
-:root {
-    /* colors */
-    --gold: #e9b620;
-    --royal-blue: #1C3564;
-    --secondary-blue: #1774BB;
-    --black: #231F20;
-    /* typography */
-    font-size: 62.5%;
-    --header: 'Golos Text';
-    --body-text: 'Baskervville';
-}
-
 html {
+    font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding: 2rem;
 }
 
 body {
-    font-family: 'Baskervville', serif, 'Golos Text', sans-serif;
+    font-family: 'Golos Text', sans-serif, 'Baskervville', serif;
     font-size: 1.6rem;
     box-sizing: border-box;
-    /* background-image: linear-gradient(to bottom, #c1c9e5, #ffffff); */
 }
 
 *,
-*:before,
-*:after,
+*::before,
+*::after,
 *:hover,
 *:focus,
 *:active {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 h1 {
-    font-family: var(--header);
+    font-family: $text-header;
     font-size: 8rem;
     text-transform: uppercase;
     letter-spacing: 1.6px;
@@ -49,7 +36,7 @@ h1 {
 
 h2 {
     margin: 3rem 0;
-    font-family: var(--header);
+    font-family: $text-header;
     font-size: 6rem;
     text-transform: uppercase;
     letter-spacing: 1.4px;
@@ -58,7 +45,7 @@ h2 {
 
 h3 {
     margin: 0 0 1.5rem 0;
-    font-family: var(--header);
+    font-family: $text-header;
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1.2;
@@ -66,7 +53,7 @@ h3 {
 
 h4 {
     margin: 0 0 1.5rem 0;
-    font-family: var(--header);
+    font-family: $text-header;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1.2;
@@ -74,8 +61,8 @@ h4 {
 
 p {
     margin-bottom: 2rem;
-    font-family: var(--body-text);
+    font-family: $text-body;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    color: white;
+    color: $color-white;
 }

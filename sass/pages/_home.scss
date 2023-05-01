@@ -1,0 +1,343 @@
+#nav {
+    display: flex;
+    height: 11vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-blue-royal;
+    a.logo-link:link::after {
+        content: url(../images/graphics/YW_horizontal.png);
+        display: inline-block;
+        padding-top: 1vh;
+        height: 9vh;
+        filter: drop-shadow(0 2px 2px $color-black);
+    }
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        font-family: var(--header);
+        min-width: 50vw;
+    }
+}
+
+.link,
+.link:link,
+.link:visited {
+    padding: 0 3rem;
+    list-style-type: none;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    color: $color-white;
+}
+
+.link:active {
+    color: $color-gold;
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration-line: none;
+    font-family: var(--header);
+    color: $color-white;
+    background-color: $color-gold;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px $color-black;
+    padding: 1.25rem 2.25rem;
+    border-radius: 50px;
+    transition: all .2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    transform: translateY(2px);
+}
+
+btn-contact {
+    display: inline-block;
+    background-color: $color-gold;
+    color: $color-white;
+    height: 5vh;
+    width: 15vh;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    border-radius: 2.5rem;
+    text-shadow: 1px 1px 1px $color-black;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    clip-path: ellipse(80% 80% at 50% 20%);
+    overflow: hidden;
+    background-color: $color-blue-secondary;
+    #vid {
+        height: 100%;
+        background-color: #000000;
+        video.header-video {
+            position: relative;
+            width: 100%;
+        }
+    }
+    #header-text {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        .circle {
+            position: absolute;
+            height: 60vh;
+            width: 60vh;
+            border-radius: 50%;
+            background-color: $color-blue-royal;
+            opacity: 50%;
+            animation-name: random;
+            animation-duration: 180s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        .circle2 {
+            position: absolute;
+            height: 80vh;
+            width: 80vh;
+            border-radius: 50%;
+            background-color: $color-gold;
+            opacity: 40%;
+            animation-name: random2;
+            animation-duration: 200s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }
+        ul li.feature {
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            font-size: 3rem;
+            text-align: center;
+            font-weight: 700;
+            color: $color-white;
+            text-shadow: 1px 1px $color-black;
+            list-style-type: none;
+        }
+    }
+}
+
+#main {
+    background-image: linear-gradient(transparent, $color-blue-secondary);
+}
+
+#services {
+    padding: 10vh 5vw 10vh 10vw;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(transparent, rgba($color-blue-secondary, 0.267));
+    clip-path: ellipse(80% 80% at 50% 20%);
+    h1.heading-stylized {
+        position: absolute;
+        font-size: 10rem;
+        transform-origin: right top;
+        transform: rotate(-90deg);
+        color: $color-blue-royal;
+        opacity: .7;
+        top: calc(10vh + 3.5rem);
+        left: -35rem;
+    }
+    div {
+        &.service-card {
+            position: relative;
+            margin: 3rem 3rem;
+            width: 40rem;
+            height: 23.3rem;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .8);
+            border-radius: 10px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: inherit;
+                width: 5rem;
+                top: 0;
+                left: 0;
+                background-color: $color-gold;
+                border-radius: 10px 0 0 10px;
+            }
+            &:hover {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, .8);
+                z-index: -2;
+            }
+        }
+        &.card-communication {
+            background-image: url("../images/graphics/Business-Communication.jpg");
+            background-size: cover;
+            @include card-theme;
+        }
+        &.card-networking {
+            background-image: url("../images/graphics/networking.jpg");
+            background-size: cover;
+            @include card-theme ($theme: "networking");
+        }
+        &.card-vision {
+            background-image: url("../images/graphics/vision.jpg");
+            background-size: cover;
+            @include card-theme ($theme: "vision");
+        }
+        &.card-cycles {
+            background-image: url("../images/graphics/breaking-cycles.jpg");
+            background-size: cover;
+            @include card-theme ($theme: "breaking cycles")
+        }
+        &.card-culture {
+            background-image: url("../images/graphics/culture.jpg");
+            background-size: cover;
+            @include card-theme ($theme: "culture");
+        }
+        &.card-community {
+            background-image: url("../images/graphics/community.jpg");
+            background-size: cover;
+            @include card-theme ($theme: "community");
+        }
+        div.overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba($color-blue-royal, .8);
+            width: calc(100% - 5rem);
+            height: 100%;
+            border-radius: 0 10px 10px 0;
+            z-index: -1;
+            & ul.service-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                align-items: center;
+                list-style-type: none;
+                & li.service-detail {
+                    font-family: 'Golos Text';
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 3px;
+                    margin: 1rem 0 1rem 0;
+                    color: $color-white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+blockquote {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+    max-width: 70%;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: var(body-text);
+    font-style: italic;
+    font-weight: 700;
+}
+
+#about {
+    padding: 5vw 5vw 10vw 5vw;
+    box-shadow: 5px 5px 3px 3px $color-black;
+    background-image: linear-gradient(transparent, rgba($color-blue-secondary, 0.267));
+    clip-path: ellipse(80% 80% at 50% 20%);
+}
+
+#about-container {
+    height: 50vh;
+    position: relative;
+    display: flex;
+}
+
+.feature-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: auto;
+    background-color: $color-blue-royal;
+    border-radius: 10px;
+}
+
+img.feature {
+    height: 80%;
+    box-shadow: 0 3px 3px 1px rgba(34, 34, 34, 0.55);
+    border-radius: 10px;
+}
+
+.about-text-container {
+    padding: 2rem;
+}
+
+details.about {
+    margin: 1vh 0 1vh 0;
+    border-radius: 7px;
+    background-color: $color-blue-secondary;
+}
+
+summary.description {
+    padding-left: 20px;
+    font-family: 'Golos Text';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 2rem;
+    background-color: $color-blue-royal;
+    height: 3rem;
+    border-radius: 7px;
+}
+
+#experience {
+    padding: 10vh 5vw 10vh 5vw;
+    background-image: linear-gradient(transparent, $color-gold);
+    clip-path: ellipse(80% 80% at 50% 20%);
+}
+
+#exp-logo-group {
+    display: flex;
+}
+
+.exp-logo {
+    width: auto;
+    height: 100px;
+    padding: 1rem;
+}
+
+#contact {
+    padding: 10vh 5vw 10vh 5vw;
+    background-image: linear-gradient(transparent, #135e97);
+    clip-path: ellipse(80% 80% at 50% 20%);
+}
+
+#contact-form,
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#footer {
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-blue-royal;
+}

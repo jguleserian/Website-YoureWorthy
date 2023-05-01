@@ -1,0 +1,49 @@
+@keyframes random {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: 200px;
+        top: 200px;
+        opacity: 65%;
+    }
+    50% {
+        left: 100px;
+        top: 400px;
+        opacity: 80%;
+    }
+    75% {
+        left: 400px;
+        top: 250px;
+        opacity: 60%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        opacity: 50%;
+    }
+}
+
+@keyframes random2 {
+    0% {
+        right: 0;
+        bottom: 0;
+    }
+    25% {
+        right: 200px;
+        bottom: 200px;
+    }
+    50% {
+        right: 100px;
+        bottom: 400px;
+    }
+    75% {
+        right: 400px;
+        bottom: 250px;
+    }
+    100% {
+        right: 0;
+        bottom: 0;
+    }
+}
